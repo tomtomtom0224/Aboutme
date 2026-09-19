@@ -1,0 +1,70 @@
+.media-figure img {
+    width: 50%;       /* 親要素の幅いっぱいに広げる場合 */
+    max-width: 500px;  /* 画像の最大幅を指定 */
+    height: auto;      /* 縦横比を維持して自動調整 */
+}
+
+/* 親要素をFlexboxにする */
+.container {
+    display: flex;
+    align-items: center;    /* 垂直方向の位置を中央に揃える（上部に揃えたい場合は flex-start） */
+    gap: 20px;              /* 要素と要素の間のすき間をあける */
+}
+
+/* 必要に応じてそれぞれの大きさを調整 */
+.media-figure img {
+    width: 300px;
+    height: auto;
+}
+
+/* ヘッダーの文字色や配置 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c3e50;
+  padding: 10px 20px;
+  color: white;
+}
+.nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.site-main {
+  backgraund-color:#ffffff;
+  display: flex;
+  justify-content: space-between; /* About me を左端、nav を右端へ */
+  align-items: center;            /* 上下の中心を揃える */
+}
+
+/* nav要素内のリンクを横並びにする */
+.font-header {
+  display: flex;
+  color:#ffffff;
+  gap: 15px; /* メニュー同士の間隔 */
+  list-style: none; /* リストタグ（ul/li）を使う場合用 */
+  margin: 0;
+  padding: 5;
+}
+
+.footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 30px 20px 10px;
+  margin-top: 50px;
+}
+.footer a {
+  color: #64b5f6;
+}
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  border-top: 1px solid #455a64;
+  padding-top: 10px;
+}
