@@ -154,9 +154,10 @@
     width: 100%; /* ‘S•‚É‚·‚é */
   }
 }
-
+/*
 @media (max-width: 600px) {
   .step-1, .step-2, .step-3 {
     transform: translateX(0);
   }
 }
+*/
