@@ -68,3 +68,14 @@
   border-top: 1px solid #455a64;
   padding-top: 10px;
 }
+
+/* 画面幅が768px以下のとき（スマホ・タブレット） */
+@media (max-width: 768px) {
+  /* Flexboxで横並びにしてある要素を縦並びに変える */
+  .profile-row {
+    flex-direction: column;
+  }
+  .profile-label {
+    width: 100%; /* 全幅にする */
+  }
+}
