@@ -1,3 +1,4 @@
+@charset "utf-8";
 .media-figure img {
     width: 50%;       /* 親要素の幅いっぱいに広げる場合 */
     max-width: 500px;  /* 画像の最大幅を指定 */
@@ -55,12 +56,14 @@
 
 /* ------------------------------------------------------------------------------------------- */
 .site-main {
-  backgraund-color:#ffffff;
+  background-color:#ffffff;
   display: flex;
   justify-content: center;/* 全体を中心へ */
   align-items: center;            /* 上下の中心を揃える */
 }
-
+.licensename{
+  color: #1976d2;
+}
 /* 自己PRをカード化する */
 .pr-card {
   border: 1px solid #e0e0e0;
@@ -70,22 +73,32 @@
   margin-top: 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
+.pr-stack {
+  display: flex;
+  flex-direction: column;
+}
 
-/* 1つ目は標準位置 */
+.pr-arrow {
+  text-align: center;
+  margin: 8px 0;
+  color: #888;
+}
+
+/* 右にずらす際、はみ出しを防ぐために幅を少し調整 */
 .step-1 {
-  transform: translateX(0);
+  width: calc(100% - 60px);
+  margin-left: 0;
 }
 
-/* 2つ目は少し右へ */
 .step-2 {
-  transform: translateX(30px);
+  width: calc(100% - 60px);
+  margin-left: 30px;
 }
 
-/* 3つ目はさらに右へ */
 .step-3 {
-  transform: translateX(60px);
+  width: calc(100% - 60px);
+  margin-left: 60px;
 }
-
 /* ------------------------------------------------------------------------------------------- */
 /* 全体の枠組み */
 .profile-container {
@@ -102,7 +115,10 @@
   display: flex;
   border-bottom: 1px solid #e0e0e0; /* 薄いグレーの区切り線 */
 }
+.profile-row2 {
 
+  border-bottom: 1px solid #e0e0e0; /* 薄いグレーの区切り線 */
+}
 /* 左側の項目名（灰色背景・太字） */
 .profile-label {
   width: 200px; /* 左側の幅 */
@@ -111,7 +127,13 @@
   padding: 20px;
   flex-shrink: 0; /* 幅を固定 */
 }
+.profile-label2 {
 
+  background-color: #f2f2f2; /* 薄い灰色 */
+  font-weight: bold;
+  padding: 20px;
+  flex-shrink: 0; /* 幅を固定 */
+}
 /* 右側の詳細内容 */
 .profile-content {
   flex-grow: 1;
@@ -145,10 +167,10 @@
 
 /* ------------------------------------------------------------------------------------------- */
 /* 画面幅が768px以下のとき（スマホ・タブレット） */
-/*
+
 @media (max-width: 768px) {
-   Flexboxで横並びにしてある要素を縦並びに変える 
-  .profile-row {
+   /*Flexboxで横並びにしてある要素を縦並びに変える */
+  .profile-row,.container {
     flex-direction: column;
   }
   .profile-label {
@@ -157,8 +179,10 @@
 }
 
 @media (max-width: 600px) {
-  .step-1, .step-2, .step-3 {
-    transform: translateX(0);
+  .step-1,
+  .step-2,
+  .step-3 {
+    width: 100%;
+    margin-left: 0;
   }
 }
-*/
